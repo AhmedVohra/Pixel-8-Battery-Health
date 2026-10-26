@@ -1,0 +1,22 @@
+# Pixel 8 Battery Health
+
+> Free Android app (APK) that shows Pixel 8 battery health: the capacity the battery holds now compared with its 4,550 mAh design capacity, the charge cycle count, temperature, voltage, current, live power in watts, and the battery's manufacture and first-use dates. No root needed. Distributed as an APK on GitHub, not on Google Play.
+
+Key facts:
+
+- Latest version: 1.0, released 2026-10-26, 3.5 MB, Android 8.0 or newer. Built and tested on a Pixel 8 with Android 17.
+- Package name: dev.rubiks.batterybuddy
+- Cycle count needs Android 14 or newer and no extra setup.
+- Android's measured capacity, its health score and the battery dates need three permissions granted once over adb: BATTERY_STATS, DUMP and PACKAGE_USAGE_STATS. Without them the app estimates health from the current charge.
+- Other phones can install it; the design capacity is built in for the Pixel 8 only.
+- Battery readings stay on the phone. The app shows one Google AdMob banner ad.
+- Source code is not published.
+- Not affiliated with Google.
+
+## Links
+
+- [Download APK 1.0](https://github.com/AhmedVohra/Pixel-8-Battery-Health/releases/download/v1.0/Pixel-8-Battery-Health-1.0.apk): direct download
+- [Website](https://ahmedvohra.github.io/Pixel-8-Battery-Health/): features, setup with adb, FAQ
+- [Releases](https://github.com/AhmedVohra/Pixel-8-Battery-Health/releases): all versions with SHA-256 checksums
+- [Privacy policy](https://ahmedvohra.github.io/Pixel-8-Battery-Health/privacy.html)
+- [Report a problem](https://github.com/AhmedVohra/Pixel-8-Battery-Health/issues)

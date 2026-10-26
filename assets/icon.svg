@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="14 14 80 80">
+  <defs>
+    <clipPath id="body">
+      <path d="M46,32 H62 A10,10 0 0 1 72,42 V76 A10,10 0 0 1 62,86 H46 A10,10 0 0 1 36,76 V42 A10,10 0 0 1 46,32 Z"/>
+    </clipPath>
+  </defs>
+  <rect x="14" y="14" width="80" height="80" rx="18" fill="#0B0B0B"/>
+  <path d="M45,27 H63 A3,3 0 0 1 66,30 V34 H42 V30 A3,3 0 0 1 45,27 Z" fill="#FFF" stroke="#FFF" stroke-width="7"/>
+  <path d="M46,32 H62 A10,10 0 0 1 72,42 V76 A10,10 0 0 1 62,86 H46 A10,10 0 0 1 36,76 V42 A10,10 0 0 1 46,32 Z" fill="#FFF" stroke="#FFF" stroke-width="7"/>
+  <path d="M45,27 H63 A3,3 0 0 1 66,30 V34 H42 V30 A3,3 0 0 1 45,27 Z" fill="#A3E635" stroke="#111" stroke-width="2.6"/>
+  <g clip-path="url(#body)">
+    <path d="M30,28 H78 V90 H30 Z" fill="#FFFBFF"/>
+    <path d="M30,66 Q42,62 54,66 T78,66 V90 H30 Z" fill="#A3E635"/>
+    <path d="M41,41 V52" fill="none" stroke="#FFF" stroke-opacity=".7" stroke-linecap="round" stroke-width="2.6"/>
+  </g>
+  <path d="M46,32 H62 A10,10 0 0 1 72,42 V76 A10,10 0 0 1 62,86 H46 A10,10 0 0 1 36,76 V42 A10,10 0 0 1 46,32 Z" fill="none" stroke="#111" stroke-width="2.8"/>
+  <path d="M44.5,53 a2.5,3.3 0 1 0 5,0 a2.5,3.3 0 1 0 -5,0 Z" fill="#111"/>
+  <path d="M58.5,53 a2.5,3.3 0 1 0 5,0 a2.5,3.3 0 1 0 -5,0 Z" fill="#111"/>
+  <path d="M47.3,51.4 a0.9,0.9 0 1 0 1.8,0 a0.9,0.9 0 1 0 -1.8,0 Z" fill="#FFF"/>
+  <path d="M61.3,51.4 a0.9,0.9 0 1 0 1.8,0 a0.9,0.9 0 1 0 -1.8,0 Z" fill="#FFF"/>
+  <path d="M39,59 a3,1.8 0 1 0 6,0 a3,1.8 0 1 0 -6,0 Z" fill="#FF8FB1" fill-opacity=".6"/>
+  <path d="M63,59 a3,1.8 0 1 0 6,0 a3,1.8 0 1 0 -6,0 Z" fill="#FF8FB1" fill-opacity=".6"/>
+  <path d="M50.6,58.6 Q54,62 57.4,58.6" fill="none" stroke="#111" stroke-linecap="round" stroke-width="2.2"/>
+</svg>
