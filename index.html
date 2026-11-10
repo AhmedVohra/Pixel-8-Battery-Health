@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pixel 8 Battery Health – Check Battery Health &amp; Cycle Count</title>
-<meta name="description" content="Free app that shows your Pixel 8 battery health: real capacity in mAh, charge cycle count, temperature and live power. No root needed. Download the APK.">
+<meta name="description" content="Free app for Pixel 8 battery health: real capacity in mAh, charge cycle count, live power and which apps drain the battery. No root needed. Download the APK.">
 <link rel="canonical" href="https://ahmedvohra.github.io/Pixel-8-Battery-Health/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Muhammad Ahmed Vohra">
@@ -14,16 +14,16 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pixel 8 Battery Health">
 <meta property="og:title" content="Pixel 8 Battery Health – Check Battery Health &amp; Cycle Count">
-<meta property="og:description" content="Free Android app: real battery capacity in mAh, charge cycle count, temperature and live power for the Pixel 8. No root.">
+<meta property="og:description" content="Free Android app: real battery capacity in mAh, charge cycle count, live power and what is draining the battery on a Pixel 8. No root.">
 <meta property="og:url" content="https://ahmedvohra.github.io/Pixel-8-Battery-Health/">
 <meta property="og:image" content="https://ahmedvohra.github.io/Pixel-8-Battery-Health/assets/social.png">
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="640">
-<meta property="og:image:alt" content="Pixel 8 Battery Health app showing 92% battery health and 4,172 of 4,550 mAh">
+<meta property="og:image:alt" content="Pixel 8 Battery Health app showing 91% battery health and 4,152 of 4,550 mAh">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pixel 8 Battery Health – Check Battery Health &amp; Cycle Count">
-<meta name="twitter:description" content="Free Android app: real battery capacity in mAh, charge cycle count, temperature and live power for the Pixel 8. No root.">
+<meta name="twitter:description" content="Free Android app: real battery capacity in mAh, charge cycle count, live power and what is draining the battery on a Pixel 8. No root.">
 <meta name="twitter:image" content="https://ahmedvohra.github.io/Pixel-8-Battery-Health/assets/social.png">
 
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
@@ -46,15 +46,16 @@
       "@id": "https://ahmedvohra.github.io/Pixel-8-Battery-Health/#app",
       "name": "Pixel 8 Battery Health",
       "alternateName": "Pixel 8 battery health checker",
-      "description": "Free Android app that shows Pixel 8 battery health: the capacity the battery holds now compared with when it was new, charge cycle count, temperature, voltage, current, live power and the battery's manufacture and first-use dates.",
+      "description": "Free Android app that shows Pixel 8 battery health: the capacity the battery holds now compared with when it was new, charge cycle count, temperature, voltage, current, live power averaged over 30 seconds, what used the battery since the last charge by app, and the battery's manufacture and first-use dates.",
       "url": "https://ahmedvohra.github.io/Pixel-8-Battery-Health/",
       "sameAs": ["https://github.com/AhmedVohra/Pixel-8-Battery-Health"],
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Android 8.0 or later",
-      "softwareVersion": "1.0",
+      "softwareVersion": "1.1",
       "datePublished": "2026-10-26",
+      "dateModified": "2026-11-10",
       "fileSize": "3.5 MB",
-      "downloadUrl": "https://github.com/AhmedVohra/Pixel-8-Battery-Health/releases/download/v1.0/Pixel-8-Battery-Health-1.0.apk",
+      "downloadUrl": "https://github.com/AhmedVohra/Pixel-8-Battery-Health/releases/download/v1.1/Pixel-8-Battery-Health-1.1.apk",
       "image": "https://ahmedvohra.github.io/Pixel-8-Battery-Health/assets/icon-512.png",
       "screenshot": "https://ahmedvohra.github.io/Pixel-8-Battery-Health/assets/screenshot.png",
       "featureList": [
@@ -62,7 +63,8 @@
         "Measured battery capacity in mAh",
         "Charge cycle count",
         "Battery temperature, voltage and current",
-        "Live power graph in watts",
+        "Live power in watts, averaged over 30 seconds, with a two-minute graph",
+        "Battery use since the last charge by app and by part of the phone",
         "Battery manufacture date and first-use date",
         "Time to full charge"
       ],
@@ -81,7 +83,17 @@
         {
           "@type": "Question",
           "name": "How do I see the battery cycle count on a Pixel 8?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Open Pixel 8 Battery Health. The Charge cycles tile shows the cycle count Android keeps for the battery, plus the average number of cycles per day. It works without a computer on Android 14 and newer, which every Pixel 8 runs." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Open Pixel 8 Battery Health. The Readings card shows the cycle count Android keeps for the battery, plus the average number of cycles per day. It works without a computer on Android 14 and newer, which every Pixel 8 runs." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I see what is draining my Pixel 8 battery?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Grant the three adb permissions once, then open Pixel 8 Battery Health and scroll to Since last charge. It shows how much went to mobile data, CPU, screen and GPU since you last charged, and the top 5 apps with how much of each app's use happened while it was not on screen. The numbers are Android's own estimate." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the power reading jump when I open an app?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Opening or switching apps spikes power for a few seconds, so a single one-second reading can look like heavy drain. Pixel 8 Battery Health shows a 30-second average as the main number, leaves out the spike from opening the app itself, and shows the current reading and the peak next to it." }
         },
         {
           "@type": "Question",
@@ -91,7 +103,7 @@
         {
           "@type": "Question",
           "name": "Does Pixel 8 Battery Health need root?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Most readings work right after install. Measured capacity, Android's health score and the battery dates need three permissions that you grant once with adb from a computer. No root is needed." }
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Most readings work right after install. Measured capacity, Android's health score, the battery dates and the per-app battery use need three permissions that you grant once with adb from a computer. No root is needed." }
         },
         {
           "@type": "Question",
@@ -212,13 +224,13 @@ footer a { color: var(--soft); }
       <h1>Pixel 8 <span>Battery Health</span></h1>
       <p class="lead">A free Android app that shows how much charge your Pixel 8 battery still holds, how many charge cycles it has done, and what it is doing right now.</p>
       <div class="buttons">
-        <a class="btn main" href="https://github.com/AhmedVohra/Pixel-8-Battery-Health/releases/download/v1.0/Pixel-8-Battery-Health-1.0.apk">Download APK (3.5 MB)</a>
+        <a class="btn main" href="https://github.com/AhmedVohra/Pixel-8-Battery-Health/releases/download/v1.1/Pixel-8-Battery-Health-1.1.apk">Download APK (3.5 MB)</a>
         <a class="btn" href="https://github.com/AhmedVohra/Pixel-8-Battery-Health/releases">All releases</a>
       </div>
-      <p class="meta">Version 1.0 · Android 8.0 or newer · No root · Free with a small banner ad</p>
+      <p class="meta">Version 1.1 · Android 8.0 or newer · No root · Free with a small banner ad</p>
     </div>
     <figure class="phone">
-      <img src="assets/screenshot-720.jpg" width="720" height="1423" alt="Pixel 8 Battery Health app on a Pixel 8 showing 92% battery health, 4,172 mAh of 4,550 mAh, and 291 charge cycles" fetchpriority="high">
+      <img src="assets/screenshot-720.jpg" width="720" height="1072" alt="Pixel 8 Battery Health 1.1 on a Pixel 8 showing 91% battery health, 4,152 mAh of 4,550 mAh, and 0.34 W of live power" fetchpriority="high">
     </figure>
   </div>
 
@@ -239,7 +251,7 @@ footer a { color: var(--soft); }
         <div class="card">
           <span class="emoji" aria-hidden="true">⚡</span>
           <h3>Live power</h3>
-          <p>Watts flowing in or out of the battery, with a graph of the last two minutes. Updates every second.</p>
+          <p>Watts in or out of the battery, averaged over 30 seconds so app-launch spikes don't mislead, with the peak and a two-minute graph. Also charging status, charger type and time until full.</p>
         </div>
         <div class="card">
           <span class="emoji" aria-hidden="true">🌡️</span>
@@ -252,9 +264,9 @@ footer a { color: var(--soft); }
           <p>The date the battery was made, the date it was first used, and how long it has been in use.</p>
         </div>
         <div class="card">
-          <span class="emoji" aria-hidden="true">🔌</span>
-          <h3>Charging</h3>
-          <p>Charging status, charger type (wall, USB, wireless) and the time left until full.</p>
+          <span class="emoji" aria-hidden="true">📊</span>
+          <h3>What is draining it</h3>
+          <p>Since your last charge: how much went to mobile data, CPU, screen and GPU, and the top 5 apps, with how much each used while not on screen.</p>
         </div>
       </div>
     </div>
@@ -264,13 +276,20 @@ footer a { color: var(--soft); }
     <div class="wrap">
       <h2>How to check your Pixel 8 battery health</h2>
       <ol class="steps">
-        <li>On your phone, tap <a href="https://github.com/AhmedVohra/Pixel-8-Battery-Health/releases/download/v1.0/Pixel-8-Battery-Health-1.0.apk">Download APK</a>.</li>
+        <li>On your phone, tap <a href="https://github.com/AhmedVohra/Pixel-8-Battery-Health/releases/download/v1.1/Pixel-8-Battery-Health-1.1.apk">Download APK</a>.</li>
         <li>Open the downloaded file. When Android asks, allow your browser to install apps.</li>
         <li>Open <strong>Pixel 8 Battery Health</strong>. Charge cycles, temperature and live power show right away, and the Battery health card shows an estimate.</li>
-        <li>For Android's measured capacity, its health score and the battery dates, grant three permissions once from a computer (below).</li>
+        <li>For Android's measured capacity, its health score, the battery dates and what is draining the battery, grant three permissions once from a computer (below).</li>
       </ol>
 
-      <h3 id="adb">Unlock measured capacity with adb (optional)</h3>
+      <h3>How to see what is draining your Pixel 8 battery</h3>
+      <ol class="steps">
+        <li>Grant the three permissions below once from a computer.</li>
+        <li>Open the app and scroll to <strong>Since last charge</strong>. It lists what used the battery since you last charged: mobile data, CPU, screen and GPU, and the top 5 apps.</li>
+        <li>Under each app, "while not on screen" shows how much of its use happened in the background. The numbers are Android's own estimate and refresh each time you open the app.</li>
+      </ol>
+
+      <h3 id="adb">Unlock measured capacity and battery use with adb (optional)</h3>
       <p>Android keeps these readings behind system permissions that only a computer can grant. Turn on Developer options and USB debugging, install <a href="https://developer.android.com/tools/releases/platform-tools">Android platform-tools</a>, connect the phone and run:</p>
 <pre><code>adb shell pm grant dev.rubiks.batterybuddy android.permission.BATTERY_STATS
 adb shell pm grant dev.rubiks.batterybuddy android.permission.DUMP
@@ -278,7 +297,7 @@ adb shell pm grant dev.rubiks.batterybuddy android.permission.PACKAGE_USAGE_STAT
       <table>
         <thead><tr><th>Permission</th><th>Unlocks</th></tr></thead>
         <tbody>
-          <tr><td><code>DUMP</code> and <code>PACKAGE_USAGE_STATS</code></td><td>Battery capacity measured by Android across real charges (last, min and max)</td></tr>
+          <tr><td><code>DUMP</code> and <code>PACKAGE_USAGE_STATS</code></td><td>Battery capacity measured by Android across real charges (last, min and max), and the Since last charge card</td></tr>
           <tr><td><code>BATTERY_STATS</code></td><td>Android's battery health score, manufacture date and first-use date</td></tr>
         </tbody>
       </table>
@@ -294,7 +313,13 @@ adb shell pm grant dev.rubiks.batterybuddy android.permission.PACKAGE_USAGE_STAT
       <p>Install Pixel 8 Battery Health and open it. The Battery health card shows how much charge the battery holds now compared with when it was new, as a percentage and in mAh. For Android's own measured capacity, grant three permissions once with adb, as shown above.</p>
 
       <h3>How do I see the battery cycle count on a Pixel 8?</h3>
-      <p>Open the app. The Charge cycles tile shows the cycle count Android keeps for the battery, plus your average cycles per day. It works without a computer on Android 14 and newer, which every Pixel 8 runs.</p>
+      <p>Open the app. The Readings card shows the cycle count Android keeps for the battery, plus your average cycles per day. It works without a computer on Android 14 and newer, which every Pixel 8 runs.</p>
+
+      <h3>How do I see what is draining my Pixel 8 battery?</h3>
+      <p>Grant the three adb permissions once, then open the app and scroll to Since last charge. It shows how much went to mobile data, CPU, screen and GPU since you last charged, and the top 5 apps with how much of each app's use happened while it was not on screen. The numbers are Android's own estimate.</p>
+
+      <h3>Why does the power reading jump when I open an app?</h3>
+      <p>Opening or switching apps spikes power for a few seconds, so a single one-second reading can look like heavy drain. The app shows a 30-second average as the main number, leaves out the spike from opening the app itself, and shows the current reading and the peak next to it. When the phone is plugged in but not charging, the charger covers part of the power, so the reading is only the battery's share, and the app says so.</p>
 
       <h3>What is the Pixel 8 battery capacity when new?</h3>
       <p>The app uses 4,550 mAh as the Pixel 8 design capacity and compares the measured capacity with it. For example, a Pixel 8 that holds 4,172 mAh is at 92% battery health.</p>
@@ -309,11 +334,11 @@ adb shell pm grant dev.rubiks.batterybuddy android.permission.PACKAGE_USAGE_STAT
       <p>It installs on any phone with Android 8.0 or newer and shows live readings. The design capacity is built in for the Pixel 8 only. On other phones the app reads it from Android's power profile, which has not been tested. The cycle count needs Android 14 or newer.</p>
 
       <h3>Is my battery data sent anywhere?</h3>
-      <p>No. Battery readings stay on the phone. The app shows a banner ad from Google AdMob, which uses the network. See the <a href="privacy.html">privacy policy</a>.</p>
+      <p>No. Battery readings and per-app battery use stay on the phone. The app shows a banner ad from Google AdMob, which uses the network. See the <a href="privacy.html">privacy policy</a>.</p>
 
       <h3>How do I check the download is genuine?</h3>
       <p>Compare these with the APK you downloaded:</p>
-      <p class="hash">APK SHA-256: <code>3486d864fba5cd3dd3ce7400db034859a62fe56e647bf50e8b7acef0b2088a70</code><br>
+      <p class="hash">APK SHA-256: <code>237b9a90a66a81dc7405ec61aec82a7f056c21381eb561f192f338bfa2e53c71</code><br>
       Signing certificate SHA-256: <code>f02d11df8b793a903a44286f3a3ede52c155cd09756d3c8578a22aac2df846ee</code></p>
     </div>
   </section>
