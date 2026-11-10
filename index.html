@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://ahmedvohra.github.io/Pixel-8-Battery-Health/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Muhammad Ahmed Vohra">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#141415">
 <meta name="color-scheme" content="dark">
 
 <meta property="og:type" content="website">
@@ -34,7 +34,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Nunito:wght@400;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap">
 <link rel="preload" as="image" href="assets/screenshot-720.jpg">
 
 <script type="application/ld+json">
@@ -123,84 +123,103 @@
 
 <style>
 :root {
-  --bg: #000;
-  --card: #121212;
-  --border: #1f1f1f;
-  --ink: #fff;
-  --soft: #9ca3af;
+  --bg: #141415;
+  --deep: #0f0f10;
+  --raised: #232325;
+  --line: rgba(237, 237, 237, .08);
+  --ink: #ededed;
+  --soft: #a1a1a6;
+  --muted: #85858b;
   --accent: #a3e635;
-  --accent2: #4ade80;
-  --on-accent: #0a0a0a;
-  --code: #0d0d0d;
+  --accent-hover: #b4ec5a;
+  --on-accent: #0f0f10;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "DM Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0;
-  background: var(--bg);
-  background-image:
-    radial-gradient(circle at 95% 0%, rgba(163, 230, 53, .14), transparent 40rem),
-    radial-gradient(circle at 0% 60%, rgba(74, 222, 128, .07), transparent 36rem);
-  background-repeat: no-repeat;
-  color: var(--ink);
-  font: 400 1.0625rem/1.6 Nunito, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-}
-a { color: var(--accent); }
-h1, h2, h3, .brand { font-family: Fredoka, Nunito, system-ui, sans-serif; font-weight: 600; letter-spacing: -.01em; }
-h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); line-height: 1.15; margin: 0 0 1.25rem; }
-h3 { font-size: 1.2rem; margin: 0 0 .35rem; }
-p { margin: 0 0 1rem; }
-code, pre { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: .9rem; }
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/26px var(--sans); font-feature-settings: "tnum"; }
+a { color: var(--ink); text-decoration: underline; text-decoration-color: rgba(237, 237, 237, .32); text-underline-offset: 3px; transition: color 160ms var(--ease), text-decoration-color 160ms var(--ease); }
+a:hover { color: var(--accent); text-decoration-color: currentColor; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3 { font-weight: 500; margin: 0; }
+h2 { font-size: 32px; line-height: 40px; letter-spacing: -.02em; margin-bottom: 24px; }
+h3 { font-size: 18px; line-height: 28px; }
+p { margin: 0 0 16px; }
+strong { font-weight: 500; color: var(--ink); }
+code, pre { font-family: var(--mono); }
+code { font-size: 14px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
 
-header { padding: 18px 0; }
-header .wrap { display: flex; align-items: center; gap: 12px; }
-.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-size: 1.15rem; }
-.brand img { width: 36px; height: 36px; }
-nav { margin-left: auto; display: flex; gap: 20px; font-weight: 700; font-size: .95rem; }
+header .wrap { display: flex; align-items: center; gap: 12px; height: 64px; }
+.brand { display: flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; font-weight: 500; }
+.brand:hover { color: var(--ink); }
+.brand img { width: 32px; height: 32px; }
+nav { margin-left: auto; display: flex; gap: 24px; font-size: 14px; }
 nav a { color: var(--soft); text-decoration: none; }
 nav a:hover { color: var(--ink); }
 
-.hero { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 56px; align-items: center; padding-top: 48px; padding-bottom: 72px; }
-.hero h1 { font-size: clamp(2.6rem, 7vw, 4.4rem); line-height: 1.02; margin: 0 0 1.25rem; }
-.hero h1 span { color: var(--accent); display: block; }
-.lead { font-size: 1.25rem; color: #d1d5db; max-width: 34rem; }
-.buttons { display: flex; flex-wrap: wrap; gap: 12px; margin: 1.75rem 0 1rem; }
-.btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: 999px; font-weight: 800; text-decoration: none; border: 2px solid var(--border); color: var(--ink); }
-.btn.main { background: linear-gradient(90deg, var(--accent), var(--accent2)); color: var(--on-accent); border: 0; }
-.btn:hover { filter: brightness(1.08); }
-.meta { color: var(--soft); font-size: .95rem; }
-.phone { margin: 0; border: 7px solid var(--border); border-radius: 40px; overflow: hidden; box-shadow: 0 0 90px rgba(163, 230, 53, .16); background: #000; }
-.phone img { display: block; width: 100%; height: auto; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center; padding-top: 48px; padding-bottom: 96px; }
+.hero h1 { font-size: 64px; line-height: 1.04; letter-spacing: -.03em; margin-bottom: 24px; }
+.hero h1 span { display: block; }
+.lead { font-size: 19px; line-height: 30px; color: var(--soft); max-width: 34rem; margin-bottom: 32px; }
+.buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 20px; border-radius: 10px; font-weight: 500; text-decoration: none; transition: background-color 160ms var(--ease), transform 120ms var(--ease); }
+.btn:active { transform: scale(.98); }
+.btn.main { background: var(--accent); color: var(--on-accent); }
+.btn.main:hover { background: var(--accent-hover); color: var(--on-accent); }
+.btn.alt { background: var(--raised); color: var(--ink); box-shadow: inset 0 0 0 1px var(--line), inset 0 1px 0 rgba(255, 255, 255, .06); }
+.btn.alt:hover { background: #2a2a2d; color: var(--ink); }
+.meta { font-family: var(--mono); font-size: 13px; line-height: 20px; color: var(--muted); margin: 0; }
+.shot { margin: 0; justify-self: center; width: 100%; max-width: 400px; padding: 12px; background: var(--deep); border-radius: 32px; box-shadow: inset 0 0 0 1px var(--line), 0 24px 64px rgba(0, 0, 0, .45); }
+.shot img { display: block; width: 100%; height: auto; border-radius: 20px; }
 
-section { padding: 56px 0; border-top: 1px solid #141414; }
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.card { background: var(--card); border: 1px solid var(--border); border-radius: 24px; padding: 22px; }
-.card p { color: var(--soft); margin: 0; }
-.emoji { font-size: 1.5rem; display: block; margin-bottom: .5rem; }
+section { padding: 80px 0; border-top: 1px solid var(--line); }
+.caption { color: var(--muted); font-size: 14px; line-height: 20px; margin: -12px 0 40px; }
+.features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 32px; margin: 0; padding: 0; list-style: none; }
+.features li { border-top: 1px solid var(--line); padding-top: 20px; }
+.features h3 { margin-bottom: 8px; }
+.features p { color: var(--soft); margin-bottom: 12px; }
+.reading { font-family: var(--mono); font-size: 13px; line-height: 20px; color: var(--ink); margin: 0; }
 
-ol.steps { padding-left: 1.3rem; max-width: 46rem; }
-ol.steps li { margin-bottom: .6rem; }
-pre { background: var(--code); border: 1px solid var(--border); border-radius: 16px; padding: 16px; overflow-x: auto; color: #e5e7eb; }
-table { border-collapse: collapse; width: 100%; max-width: 46rem; margin-bottom: 1rem; }
-th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
-th { color: var(--soft); font-weight: 700; }
-.faq h3 { margin-top: 1.5rem; }
-.faq p { color: #d1d5db; max-width: 46rem; }
-.hash { word-break: break-all; color: var(--soft); }
+ol.steps { list-style: none; counter-reset: step; padding: 0; margin: 0 0 48px; max-width: 46rem; }
+ol.steps li { counter-increment: step; display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 8px; margin-bottom: 12px; color: var(--soft); }
+ol.steps li::before { content: counter(step, decimal-leading-zero); font-family: var(--mono); font-size: 13px; line-height: 26px; color: var(--muted); }
+#how-to h3 { margin-bottom: 16px; }
+#how-to p { color: var(--soft); max-width: 46rem; }
+pre { background: var(--deep); box-shadow: inset 0 0 0 1px var(--line); border-radius: 12px; padding: 16px 20px; overflow-x: auto; color: var(--ink); font-size: 13px; line-height: 22px; margin: 0 0 24px; }
+pre code { font-size: inherit; }
+table { border-collapse: collapse; width: 100%; max-width: 46rem; margin-bottom: 24px; font-size: 15px; line-height: 24px; }
+th, td { text-align: left; padding: 12px 16px 12px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 400; font-size: 14px; }
+td { color: var(--soft); }
+td code { color: var(--ink); font-size: 13px; }
 
-footer { padding: 40px 0 56px; color: var(--soft); font-size: .9rem; border-top: 1px solid #141414; }
+.faq h3 { margin: 32px 0 8px; }
+.faq h2 + h3 { margin-top: 0; }
+.faq p { color: var(--soft); max-width: 46rem; }
+.hash { font-family: var(--mono); font-size: 13px; line-height: 22px; word-break: break-all; color: var(--muted); }
+.hash code { color: var(--ink); font-size: 13px; }
+
+footer { padding: 40px 0 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; line-height: 22px; }
+footer p { margin-bottom: 8px; }
 footer a { color: var(--soft); }
 
-@media (max-width: 860px) {
-  .hero { grid-template-columns: minmax(0, 1fr); gap: 40px; padding-top: 24px; }
-  .phone { max-width: 320px; margin: 0 auto; }
-  .grid { grid-template-columns: 1fr 1fr; }
-  nav { display: none; }
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 48px; padding-top: 32px; padding-bottom: 64px; }
+  .shot { max-width: 340px; }
+  .features { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  nav a:not(.gh) { display: none; }
 }
-@media (max-width: 540px) {
-  .grid { grid-template-columns: 1fr; }
-  .lead { font-size: 1.1rem; }
+@media (max-width: 560px) {
+  .wrap { padding: 0 20px; }
+  .hero h1 { font-size: 40px; }
+  .lead { font-size: 17px; line-height: 28px; }
+  h2 { font-size: 26px; line-height: 32px; }
+  section { padding: 56px 0; }
+  .features { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .btn { flex: 1 1 auto; }
 }
 </style>
 </head>
@@ -208,12 +227,12 @@ footer a { color: var(--soft); }
 
 <header>
   <div class="wrap">
-    <a class="brand" href="./"><img src="assets/icon.svg" alt="" width="36" height="36">Pixel 8 Battery Health</a>
+    <a class="brand" href="./"><img src="assets/icon.svg" alt="" width="32" height="32">Pixel 8 Battery Health</a>
     <nav aria-label="Sections">
       <a href="#features">Features</a>
       <a href="#how-to">How to use</a>
       <a href="#faq">FAQ</a>
-      <a href="https://github.com/AhmedVohra/Pixel-8-Battery-Health">GitHub</a>
+      <a class="gh" href="https://github.com/AhmedVohra/Pixel-8-Battery-Health">GitHub</a>
     </nav>
   </div>
 </header>
@@ -222,14 +241,14 @@ footer a { color: var(--soft); }
   <div class="wrap hero">
     <div>
       <h1>Pixel 8 <span>Battery Health</span></h1>
-      <p class="lead">A free Android app that shows how much charge your Pixel 8 battery still holds, how many charge cycles it has done, and what it is doing right now.</p>
+      <p class="lead">A free Android app that shows how much charge your Pixel 8 battery still holds, how many charge cycles it has done, and what is draining it right now.</p>
       <div class="buttons">
-        <a class="btn main" href="https://github.com/AhmedVohra/Pixel-8-Battery-Health/releases/download/v1.1/Pixel-8-Battery-Health-1.1.apk">Download APK (3.5 MB)</a>
-        <a class="btn" href="https://github.com/AhmedVohra/Pixel-8-Battery-Health/releases">All releases</a>
+        <a class="btn main" href="https://github.com/AhmedVohra/Pixel-8-Battery-Health/releases/download/v1.1/Pixel-8-Battery-Health-1.1.apk">Download APK</a>
+        <a class="btn alt" href="https://github.com/AhmedVohra/Pixel-8-Battery-Health/releases">All releases</a>
       </div>
-      <p class="meta">Version 1.1 · Android 8.0 or newer · No root · Free with a small banner ad</p>
+      <p class="meta">v1.1 · 3.5 MB · Android 8.0+ · no root · free, one banner ad</p>
     </div>
-    <figure class="phone">
+    <figure class="shot">
       <img src="assets/screenshot-720.jpg" width="720" height="1072" alt="Pixel 8 Battery Health 1.1 on a Pixel 8 showing 91% battery health, 4,152 mAh of 4,550 mAh, and 0.34 W of live power" fetchpriority="high">
     </figure>
   </div>
@@ -237,38 +256,39 @@ footer a { color: var(--soft); }
   <section id="features">
     <div class="wrap">
       <h2>What the app shows</h2>
-      <div class="grid">
-        <div class="card">
-          <span class="emoji" aria-hidden="true">💚</span>
+      <p class="caption">With readings from the author's Pixel 8 on Android 17</p>
+      <ul class="features">
+        <li>
           <h3>Battery health</h3>
           <p>How much charge the battery holds now compared with when it was new, as a percentage and in mAh, with the amount worn away.</p>
-        </div>
-        <div class="card">
-          <span class="emoji" aria-hidden="true">🔁</span>
+          <p class="reading">91% · 4,152 of 4,550 mAh</p>
+        </li>
+        <li>
           <h3>Charge cycle count</h3>
           <p>The cycle count Android keeps for the battery, and how many cycles a day you average.</p>
-        </div>
-        <div class="card">
-          <span class="emoji" aria-hidden="true">⚡</span>
+          <p class="reading">303 cycles · ≈ 0.7 a day</p>
+        </li>
+        <li>
           <h3>Live power</h3>
           <p>Watts in or out of the battery, averaged over 30 seconds so app-launch spikes don't mislead, with the peak and a two-minute graph. Also charging status, charger type and time until full.</p>
-        </div>
-        <div class="card">
-          <span class="emoji" aria-hidden="true">🌡️</span>
+          <p class="reading">0.34 W out · 30 s avg</p>
+        </li>
+        <li>
           <h3>Temperature, voltage, current</h3>
           <p>Battery temperature with a comfort hint, voltage, charge or drain current in mA, and charge stored right now.</p>
-        </div>
-        <div class="card">
-          <span class="emoji" aria-hidden="true">🎂</span>
+          <p class="reading">41.4 °C · 4.08 V · 74 mA</p>
+        </li>
+        <li>
           <h3>Battery age</h3>
           <p>The date the battery was made, the date it was first used, and how long it has been in use.</p>
-        </div>
-        <div class="card">
-          <span class="emoji" aria-hidden="true">📊</span>
+          <p class="reading">made Dec 11, 2024 · 1 yr 3 mo in use</p>
+        </li>
+        <li>
           <h3>What is draining it</h3>
           <p>Since your last charge: how much went to mobile data, CPU, screen and GPU, and the top 5 apps, with how much each used while not on screen.</p>
-        </div>
-      </div>
+          <p class="reading">mobile data 49% · CPU 32% · screen 11%</p>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -276,26 +296,26 @@ footer a { color: var(--soft); }
     <div class="wrap">
       <h2>How to check your Pixel 8 battery health</h2>
       <ol class="steps">
-        <li>On your phone, tap <a href="https://github.com/AhmedVohra/Pixel-8-Battery-Health/releases/download/v1.1/Pixel-8-Battery-Health-1.1.apk">Download APK</a>.</li>
-        <li>Open the downloaded file. When Android asks, allow your browser to install apps.</li>
-        <li>Open <strong>Pixel 8 Battery Health</strong>. Charge cycles, temperature and live power show right away, and the Battery health card shows an estimate.</li>
-        <li>For Android's measured capacity, its health score, the battery dates and what is draining the battery, grant three permissions once from a computer (below).</li>
+        <li><span>On your phone, tap <a href="https://github.com/AhmedVohra/Pixel-8-Battery-Health/releases/download/v1.1/Pixel-8-Battery-Health-1.1.apk">Download APK</a>.</span></li>
+        <li><span>Open the downloaded file. When Android asks, allow your browser to install apps.</span></li>
+        <li><span>Open <strong>Pixel 8 Battery Health</strong>. Charge cycles, temperature and live power show right away, and the Battery health card shows an estimate.</span></li>
+        <li><span>For Android's measured capacity, its health score, the battery dates and what is draining the battery, grant three permissions once from a computer (below).</span></li>
       </ol>
 
       <h3>How to see what is draining your Pixel 8 battery</h3>
       <ol class="steps">
-        <li>Grant the three permissions below once from a computer.</li>
-        <li>Open the app and scroll to <strong>Since last charge</strong>. It lists what used the battery since you last charged: mobile data, CPU, screen and GPU, and the top 5 apps.</li>
-        <li>Under each app, "while not on screen" shows how much of its use happened in the background. The numbers are Android's own estimate and refresh each time you open the app.</li>
+        <li><span>Grant the three permissions below once from a computer.</span></li>
+        <li><span>Open the app and scroll to <strong>Since last charge</strong>. It lists what used the battery since you last charged: mobile data, CPU, screen and GPU, and the top 5 apps.</span></li>
+        <li><span>Under each app, "while not on screen" shows how much of its use happened in the background. The numbers are Android's own estimate and refresh each time you open the app.</span></li>
       </ol>
 
-      <h3 id="adb">Unlock measured capacity and battery use with adb (optional)</h3>
+      <h3 id="adb">Turn on measured capacity and battery use with adb (optional)</h3>
       <p>Android keeps these readings behind system permissions that only a computer can grant. Turn on Developer options and USB debugging, install <a href="https://developer.android.com/tools/releases/platform-tools">Android platform-tools</a>, connect the phone and run:</p>
 <pre><code>adb shell pm grant dev.rubiks.batterybuddy android.permission.BATTERY_STATS
 adb shell pm grant dev.rubiks.batterybuddy android.permission.DUMP
 adb shell pm grant dev.rubiks.batterybuddy android.permission.PACKAGE_USAGE_STATS</code></pre>
       <table>
-        <thead><tr><th>Permission</th><th>Unlocks</th></tr></thead>
+        <thead><tr><th>Permission</th><th>Turns on</th></tr></thead>
         <tbody>
           <tr><td><code>DUMP</code> and <code>PACKAGE_USAGE_STATS</code></td><td>Battery capacity measured by Android across real charges (last, min and max), and the Since last charge card</td></tr>
           <tr><td><code>BATTERY_STATS</code></td><td>Android's battery health score, manufacture date and first-use date</td></tr>
